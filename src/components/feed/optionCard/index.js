@@ -24,7 +24,7 @@ const OptionCard = ({ item }) => {
         // setData(arr);
       }}
     >
-      <View style={styles.inner}>
+      <View style={styles.innerContainer}>
         <RegularText
           label={item?.title}
           fontSize={2}
@@ -32,7 +32,7 @@ const OptionCard = ({ item }) => {
           numberOfLines={1}
           maxWidth={80}
           style={[
-            // styles.title,
+            styles.title,
             { color: item.flag === true ? colors.primary : colors.black },
           ]}
         />

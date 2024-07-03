@@ -4,27 +4,31 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 import { colors } from "../../../global/utilities";
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   container: {
-    justifyContent: "flex-start",
-    alignItems: "center",
-    flexDirection: "row",
+    backgroundColor: colors.primary,
     width: responsiveWidth(100),
-    paddingVertical: responsiveHeight(0.5),
-    paddingHorizontal: responsiveWidth(2),
-    paddingRight: responsiveWidth(4),
-    height: responsiveWidth(10),
-    backgroundColor: colors.white,
   },
-  titleText: {
-    marginLeft: responsiveWidth(3),
+  ImageBackground: {
+    width: responsiveWidth(100),
+    resizeMode: "contain",
   },
-
-  emptyBox: {
-    width: responsiveWidth(10),
+  imagelogo: {
+    height: responsiveHeight(25),
+    width: responsiveWidth(50),
+    resizeMode: "contain",
+  },
+  logoView: {
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    width: responsiveWidth(90),
+    alignSelf: "center",
+  },
+  TextView: {
+    width: responsiveWidth(90),
+    alignSelf: "center",
+    marginTop: responsiveHeight(-5),
+    paddingBottom: responsiveHeight(1),
   },
 });
-
-export default styles;

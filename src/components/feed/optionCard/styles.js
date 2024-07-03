@@ -6,7 +6,7 @@ import {
 import { colors } from "../../../global/utilities";
 const styles = StyleSheet.create({
   CardMainView: {
-    width: responsiveWidth(88),
+    width: responsiveWidth(95),
     alignSelf: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -22,6 +22,13 @@ const styles = StyleSheet.create({
     marginVertical: responsiveHeight(1.5),
     borderRadius: responsiveWidth(3),
     justifyContent: "center",
+  },
+  innerContainer: {
+    width: responsiveWidth(90),
+    alignSelf: "center",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "row",
   },
   selectedCardMainView: {
     width: responsiveWidth(88),
@@ -41,7 +48,7 @@ const styles = StyleSheet.create({
     borderRadius: responsiveWidth(3),
     justifyContent: "center",
     borderWidth: responsiveWidth(0.2),
-    borderColor: AppColor.primary,
+    borderColor: colors.primary,
   },
 });
 

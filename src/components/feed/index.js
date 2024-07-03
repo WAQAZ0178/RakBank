@@ -1,2 +1,3 @@
 import HomeCard from "./homeCard";
-export { HomeCard };
+import OptionCard from "./optionCard";
+export { HomeCard, OptionCard };
