@@ -14,27 +14,17 @@ const Splash = () => {
   }, []);
 
   const getUserInfo = async () => {
-    // let user = await getObject("userInfo");
-    // console.log("====================================");
-    // console.log(user);
-    // console.log("====================================");
-    // if (user?.email) {
-    navigation.replace("App");
-    // } else {
-    //   navigation.replace("Login");
-    // }
+    navigation.replace("Assesment");
   };
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={"dark-content"} backgroundColor={colors.white} />
-      <View style={styles.topContainer}>
-        <FastImage
-          resizeMode="contain"
-          source={appImages.logo}
-          style={styles.logo}
-        />
-      </View>
+      <FastImage
+        resizeMode="contain"
+        source={appImages.logo}
+        style={styles.logo}
+      />
     </SafeAreaView>
   );
 };

@@ -1,13 +1,14 @@
-import { univercityTypes } from "../type";
+import { questions } from "../../services/dataSet";
+import { QuestionTypes } from "../type";
 const initialState = {
-  uniList: [],
+  questionList: questions,
 };
-const todoReducer = (state = initialState, action) => {
+const questionReducer = (state = initialState, action) => {
   switch (action.type) {
-    case univercityTypes.SET_LIST:
+    case QuestionTypes.SET_QUESTION_LIST:
       return {
         ...state,
-        uniList: action.payload,
+        questionList: action.payload,
       };
 
     default:
@@ -15,4 +16,4 @@ const todoReducer = (state = initialState, action) => {
   }
 };
 
-export default todoReducer;
+export default questionReducer;

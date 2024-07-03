@@ -1,3 +1,3 @@
-export const univercityTypes = {
-  SET_LIST: "SET_LIST",
+export const QuestionTypes = {
+  SET_QUESTION_LIST: "SET_QUESTION_LIST",
 };
