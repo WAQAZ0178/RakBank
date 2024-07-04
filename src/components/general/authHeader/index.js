@@ -3,6 +3,7 @@ import { View, Image, ImageBackground } from "react-native";
 import { appImages, colors } from "../../../global/utilities";
 import styles from "./styles";
 import MediumText from "../../../typography/mediumText";
+import BoldText from "../../../typography/boldText";
 const AuthHeader = ({ title }) => {
   return (
     <View style={styles.container}>
@@ -15,9 +16,9 @@ const AuthHeader = ({ title }) => {
           />
         </View>
         <View style={styles.TextView}>
-          <MediumText
+          <BoldText
             color={colors.white}
-            fontSize={2.2}
+            fontSize={1.8}
             label={title}
             numberOfLines={2}
             maxWidth={80}

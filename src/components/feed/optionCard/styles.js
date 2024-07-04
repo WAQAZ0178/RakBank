@@ -4,22 +4,15 @@ import {
   responsiveWidth,
 } from "react-native-responsive-dimensions";
 import { colors } from "../../../global/utilities";
+import { border, getShadow } from "../../../global/styles";
 const styles = StyleSheet.create({
   CardMainView: {
+    ...getShadow(5, "#000"),
     width: responsiveWidth(95),
     alignSelf: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
     height: responsiveHeight(7),
     backgroundColor: "white",
-    marginVertical: responsiveHeight(1.5),
+    marginVertical: responsiveHeight(1),
     borderRadius: responsiveWidth(3),
     justifyContent: "center",
   },
@@ -31,24 +24,16 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   selectedCardMainView: {
-    width: responsiveWidth(88),
+    ...getShadow(5, "#000"),
+    ...border(responsiveWidth(0.2), colors.facebook),
+    width: responsiveWidth(95),
     alignSelf: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-
-    elevation: 5,
     height: responsiveHeight(7),
     backgroundColor: "white",
-    marginVertical: responsiveHeight(1.5),
+    marginVertical: responsiveHeight(1),
     borderRadius: responsiveWidth(3),
     justifyContent: "center",
-    borderWidth: responsiveWidth(0.2),
-    borderColor: colors.primary,
+    margin: responsiveWidth(0.5),
   },
 });
 

@@ -21,6 +21,7 @@ const Splash = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={"dark-content"} backgroundColor={colors.white} />
       <FastImage
+        testID="splash-logo"
         resizeMode="contain"
         source={appImages.logo}
         style={styles.logo}

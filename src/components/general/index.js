@@ -1,2 +1,4 @@
 import AuthHeader from "./authHeader";
-export { AuthHeader };
+import AppButton from "./button";
+import { ButtonWithIcon } from "./button";
+export { AuthHeader, ButtonWithIcon, AppButton };

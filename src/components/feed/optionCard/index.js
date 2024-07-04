@@ -1,54 +1,37 @@
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
 import styles from "./styles";
-import SemiBoldText from "../../../typography/semiBoldText";
 import RegularText from "../../../typography/regularText";
 import { colors } from "../../../global/utilities";
 import { Icon } from "react-native-elements";
 import { responsiveFontSize } from "react-native-responsive-dimensions";
-const OptionCard = ({ item }) => {
+const OptionCard = ({ item, onClickOption }) => {
+  const getColor = () => {
+    return item?.isSelected ? colors.facebook : colors.black;
+  };
   return (
     <TouchableOpacity
       style={
-        item.flag === true ? styles.selectedCardMainView : styles.CardMainView
+        item?.isSelected === true
+          ? styles.selectedCardMainView
+          : styles.CardMainView
       }
-      onPress={() => {
-        // setworkoutLevel(item.title);
-        // let arr = [...data];
-        // let option = arr[flatindex].option;
-        // option.map((Element) => {
-        //   Element.flag = false;
-        // });
-        // option[index].flag = true;
-        // arr[flatindex].option = option;
-        // setData(arr);
-      }}
+      onPress={onClickOption}
     >
       <View style={styles.innerContainer}>
         <RegularText
-          label={item?.title}
+          label={item?.option}
           fontSize={2}
           color={colors.PrimaryBlue950}
-          numberOfLines={1}
+          numberOfLines={2}
           maxWidth={80}
-          style={[
-            styles.title,
-            { color: item.flag === true ? colors.primary : colors.black },
-          ]}
+          style={{ ...styles.title, color: getColor() }}
         />
 
-        {/* <Text
-          style={[
-            styles.title,
-            { color: item.flag === true ? AppColor.primary : textColor.black },
-          ]}
-        >
-          {item?.title}
-        </Text> */}
         <Icon
           name="check-circle"
           type="feather"
-          color={colors.grey}
+          color={getColor()}
           size={responsiveFontSize(3)}
         />
       </View>
