@@ -26,9 +26,9 @@ export default StyleSheet.create({
     alignSelf: "center",
   },
   TextView: {
-    width: responsiveWidth(90),
+    width: responsiveWidth(95),
     alignSelf: "center",
-    marginTop: responsiveHeight(-5),
-    paddingBottom: responsiveHeight(1),
+    marginTop: responsiveHeight(-6),
+    marginBottom: responsiveHeight(3),
   },
 });

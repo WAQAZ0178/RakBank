@@ -10,7 +10,11 @@ const questionReducer = (state = initialState, action) => {
         ...state,
         questionList: action.payload,
       };
-
+    case QuestionTypes.RESET_DATA:
+      return {
+        ...state,
+        questionList: questions,
+      };
     default:
       return state;
   }

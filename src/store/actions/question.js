@@ -12,6 +12,20 @@ export const setQuestionList = (payload) => {
   };
 };
 
+export const resetData = (payload) => {
+  return async (dispatch, getState) => {
+    try {
+      dispatch({
+        type: QuestionTypes.RESET_DATA,
+        payload: payload,
+      });
+    } catch (error) {
+      console.error("Error list:", error);
+    }
+  };
+};
+
 export const ACTIONS = {
   setQuestionList,
+  resetData,
 };
